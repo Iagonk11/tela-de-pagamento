@@ -45,7 +45,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
@@ -73,7 +73,7 @@ img {
 input {
     font: inherit;
     width: 100%;
-    border: none;
+    /* border: none; */
 }
 
 input:focus {
