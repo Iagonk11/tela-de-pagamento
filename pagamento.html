@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +8,51 @@
     <title>Pagamento</title>
     <link rel="stylesheet" href="pagamento.css">
 </head>
+
 <body>
-     <section id="Home">
-        <nav>
-            <div class="logo">
-                <img src="image/logo.png">
-            </div>
-
-            <ul>
-                <li><a href="#Home">Inicio</a></li>
-                <li><a href="#About">Sobre nós</a></li>
-                <li><a href="#Menu">Menu</a></li>
-                <li><a href="#Order">Pedido</a></li>
-            </ul>
-
-            <div class="icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-
-        </nav>
-     </section>
-     
-     <main class="container">
+    <main class="container">
         <h1 class="heading">
-            <ion-icon name="cart-outline"></ion-icon> 
+            <ion-icon name="cart-outline"></ion-icon>
         </h1>
-     </main>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     <script src="./script.js"></script>
 
-     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+        <div class="item-flex">
+
+            <section class="checkout">
+
+                <h2 class="section-heading">Detalhes do Pagamento</h2>
+
+                <div class="forma-pagamento">
+
+                    <div class="metodo-pagamento">
+
+                        <button class="metodo selecionado">
+                            <ion-icon name="card-outline"></ion-icon>
+
+                            <span>Credit Card</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
