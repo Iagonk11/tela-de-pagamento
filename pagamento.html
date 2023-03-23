@@ -28,15 +28,15 @@
                         <button class="metodo selecionado">
                             <ion-icon name="card-outline"></ion-icon>
 
-                            <span>Credit Card</span>
+                            <span>Cartão de crédito</span>
 
                             <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
                         </button>
 
                         <button class="metodo">
-                            <ion-icon name="logo-paypal"></ion-icon>
+                            <ion-icon name="logo-usd"></ion-icon>
 
-                            <span>PayPal</span>
+                            <span>Pix</span>
 
                             <ion-icon class="checkmark " name="checkmark-circle-outline"></ion-icon>
                         </button>
@@ -46,12 +46,12 @@
                     <form action="#">
 
                         <div class="cardholder-name">
-                            <label for="cardholder-name" class="label-default">Cardholder name</label>
+                            <label for="cardholder-name" class="label-default">Nome do Titular</label>
                             <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
                         </div>
 
                         <div class="card-number">
-                            <label for="card-number" class="label-default">Card number</label>
+                            <label for="card-number" class="label-default">Número do Cartão</label>
                             <input type="number" name="card-number" id="card-number" class="input-default">
                         </div>
 
@@ -85,7 +85,7 @@
                 </div>
 
                 <button class="btn btn-primary">
-                    <b>Pay</b> $ <span id="payAmount">2.15</span>
+                    <b>Valor</b> $ <span id="payAmount">35,00</span>
                 </button>
 
             </section>
@@ -170,7 +170,7 @@
                                     </div>
 
                                     <div class="price">
-                                        $ <span id="price">10</span>
+                                        $ <span id="price">15</span>
                                     </div>
 
                                 </div>
@@ -181,6 +181,40 @@
                                 <ion-icon name="close-outline"></ion-icon>
                             </button>
 
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="discount-token">
+
+                        <label for="discount-token" class="label-default">Gift card/Código de desconto</label>
+
+                        <div class="wrapper-flex">
+
+                            <input type="text" name="discount-token" id="discount-token" class="input-default">
+
+                            <button class="btn btn-outline">Apply</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="amount">
+
+                        <div class="Subtotal">
+                            <span>Subtotal</span> <span>$ <span id="subtotal">30,00</span></span>
+                        </div>
+
+                        <div class="taxa">
+                            <span>Taxa</span> <span>$ <span id="taxa">3,00</span></span>
+                        </div>
+
+                        <div class="taxa">
+                            <span>Taxa</span> <span>$ <span id="taxa">3,00</span></span>
                         </div>
 
                     </div>
