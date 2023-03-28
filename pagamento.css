@@ -110,4 +110,83 @@ input::-webkit-outer-spin-button {
     background: hsl(0, 0%, 70%);
 }
 
-/** MINUTO 14:05 */
+
+/* style principal */
+
+/* container principal */
+
+.container{
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.heading{
+    font-size: var(--fs-28);
+    font-weight: var(--fw-6);
+    color: var(--onyx);
+    border-bottom: 1px solid var(--gainsboro);
+    padding: 20px var(--px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading ion-icon{
+    font-size: 40px;
+}
+
+.item-flex{
+    display: flex;
+    flex-grow: 1;
+}
+
+
+/* checkout section style */
+
+.checkout{
+    width: 70%;
+    padding: 40px var(--px);
+    background: var(--white);
+    border-right: 1px solid var(--gainsboro);
+}
+
+.section-heading{
+    color: var(--onyx);
+    margin-bottom: 30px;
+    font-size: var(--fs-24);
+    font-weight: var(--fw-5);
+}
+
+.payment-form{margin-bottom: 40px;}
+
+.payment-method{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.payment-method .method{
+    border: 1px solid var(--quick-silver);
+    border-radius: var(--radius);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .selected{
+    border-color: var(--azure);
+}
+
+.payment-method .method ion-icon{
+
+}
+
+/** MINUTO 17:54 */
