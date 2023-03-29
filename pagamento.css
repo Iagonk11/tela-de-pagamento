@@ -439,7 +439,7 @@ input::-webkit-outer-spin-button {
     }
 
     .discount-token {
-        border-top: ;
+        border-top: none;
     }
 
 
@@ -468,4 +468,26 @@ input::-webkit-outer-spin-button {
 
 }
 
-/** MINUTO 32:08 */
+@media (max-width: 567px) {
+
+    :root {
+        --px: 20px
+    }
+
+    .metodo-pagamento .input-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .metodo-pagamento .metodo {
+        width: 100%;
+    }
+
+    .input-flex .expire-date
+    .input-flex .cvv{width: 100%;}
+
+    .expire-date .input-flex{flex-direction: row;}
+
+}
+
+/** MINUTO 36:34 */
