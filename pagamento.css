@@ -19,6 +19,7 @@
     --fs-24: 24px;
     --fs-18: 18px;
     --fs-15: 15px;
+    --fs-14: 14px;
 
     --fw-5: 500;
     --fw-6: 600;
@@ -73,7 +74,7 @@ img {
 input {
     font: inherit;
     width: 100%;
-    /* border: none; */
+    border: none;
 }
 
 input:focus {
@@ -115,7 +116,7 @@ input::-webkit-outer-spin-button {
 
 /* container principal */
 
-.container{
+.container {
     max-width: 1440px;
     min-height: 100vh;
     margin: auto;
@@ -124,7 +125,7 @@ input::-webkit-outer-spin-button {
 
 }
 
-.heading{
+.heading {
     font-size: var(--fs-28);
     font-weight: var(--fw-6);
     color: var(--onyx);
@@ -135,11 +136,11 @@ input::-webkit-outer-spin-button {
     gap: 20px;
 }
 
-.heading ion-icon{
+.heading ion-icon {
     font-size: 40px;
 }
 
-.item-flex{
+.item-flex {
     display: flex;
     flex-grow: 1;
 }
@@ -147,30 +148,32 @@ input::-webkit-outer-spin-button {
 
 /* checkout section style */
 
-.checkout{
+.checkout {
     width: 70%;
     padding: 40px var(--px);
     background: var(--white);
     border-right: 1px solid var(--gainsboro);
 }
 
-.section-heading{
+.section-heading {
     color: var(--onyx);
     margin-bottom: 30px;
     font-size: var(--fs-24);
     font-weight: var(--fw-5);
 }
 
-.payment-form{margin-bottom: 40px;}
+.forma-pagamento {
+    margin-bottom: 40px;
+}
 
-.payment-method{
+.metodo-pagamento {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
 }
 
-.payment-method .method{
+.metodo-pagamento .metodo {
     border: 1px solid var(--quick-silver);
     border-radius: var(--radius);
     width: 50%;
@@ -181,12 +184,288 @@ input::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-.payment-method .selected{
+.metodo-pagamento .selected {
     border-color: var(--azure);
 }
 
-.payment-method .method ion-icon{
+.metodo-pagamento .metodo ion-icon {
+    font-size: 20px;
+}
+
+.metodo-pagamento .metodo .checkmark {
+    margin-left: auto;
+    color: var(--quick-silver);
+}
+
+.metodo-pagamento .metodo .fill {
+    color: var(--azure);
+}
+
+.label-default {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: var(--fs-14);
+    color: var(--spanish-gray);
+}
+
+.input-default {
+    background: var(--platinum);
+    border-radius: var(--radius);
+    color: var(--davys-gray);
+}
+
+.forma-pagamento input {
+    padding: 10px 15px;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-5);
+}
+
+.cardholder-name,
+.card-number {
+    margin-bottom: 20px;
+}
+
+.card-number,
+.cvv {
+    letter-spacing: 3px;
+}
+
+.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.input-flex .expire-date,
+.input-flex .cvv {
+    width: 50%;
+}
+
+.expire-date .input-flex {
+    color: var(--spanish-gray);
+    gap: 25px;
+}
+
+.expire-date .input-flex input {
+    text-align: center;
+}
+
+.btn {
+    border-radius: var(--radius);
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.btn:focus {
+    color: var(--white);
+    background: var(--azure);
+    outline: 2px solid var(--azure);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--azure);
+    font-weight: var(--fw-5);
+    color: var(--white);
+    padding: 13px 45px;
+}
+
+.btn-primary b {
+    margin-right: 10px;
+}
+
+/*carrinho */
+
+.cart {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cart-item-box {
+    padding: 40px var(--px);
+    margin-bottom: auto;
+}
+
+.product-card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.product-card .card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.card .img-product {
+    border-radius: var(--radius);
+}
+
+.card .detail .product-name {
+    font-weight: var(--fw-6);
+    font-size: var(--fs-15);
+    color: var(--dis-gray);
+    margin-bottom: 10px;
+}
+
+.card .detail .wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.product-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-qty button {
+    background: var(--platinum);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.product-qty button:active,
+.product-close-btn:active ion-icon {
+    transform: scale(0.95);
+}
+
+.product-qty button ion-icon {
+    --ionicon-stroke-width: 60px;
+    font-size: 10px;
+}
+
+.product-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.product-close-btn ion-icon {
+    font-size: 25px;
+    color: var(--quick-silver);
+}
+
+.product-close-btn:hover ion-icon {
+    color: var(--red-salsa);
+}
+
+.discount-token {
+    padding: 40px var(--px);
+    border-top: 1px solid var var(--gainsboro);
+    border-bottom: 1px solid var var(--gainsboro);
+}
+
+.wrapper-flex {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.wrapper-flex input {
+    padding: 12px;
+    font-weight: var(--fw-6);
+    letter-spacing: 2px;
+}
+
+.btn-outline {
+    padding: 10px 25px;
+    border: 1px solid var(--azure);
+}
+
+.btn-outline:hover {
+    background: var(--azure);
+    color: var(--white);
+}
+
+
+.amount {
+    padding: 40px var(--px);
+}
+
+.amount>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount>div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.amount .total {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-7);
+    color: var(--onyx);
+}
+
+/*renponsivo */
+
+@media (max-width: 1200px) {
+
+    .item-flex {
+        flex-direction: column-reverse;
+    }
+
+    .checkout {
+        width: 100%;
+        border-right: none;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .cart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        border-bottom: 1px solid var(--gainsboro);
+    }
+
+    .cart .wrapper {
+        margin-top: auto;
+    }
+
+    .cart .cart-item-box {
+        border-right: 1px solid var(--gainsboro);
+        margin-bottom: 0;
+    }
+
+    .discount-token {
+        border-top: ;
+    }
+
+
 
 }
 
-/** MINUTO 17:54 */
+@media (max-width: 768px) {
+
+    :root {
+        --px: 40px
+    }
+
+    .cart {
+        grid-template-columns: 1fr;
+    }
+
+    .discount-token {
+        border-top: 1px solid var(--gainsboro);
+    }
+
+    .wrapper-flex {
+        gap: 20px;
+    }
+
+
+
+}
+
+/** MINUTO 32:08 */
