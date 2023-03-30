@@ -1,65 +1,88 @@
 'use strict';
 
-const payAmountBtn = document .querySelector('#payAmount');
-const decrementBtn = document .querySelector('#decrement');
-const quantityElem = document .querySelector('#quantity');
-const incrementBtn = document .querySelector('#increment');
-const priceElem = document .querySelector('#price');
-const SubtotalElem = document .querySelector('#Subtotal');
-const taxaElem = document .querySelector('#taxa');
-const totalElem = document .querySelector('#total');
+// all initial elements
+const payAmountBtn = document.querySelector('#payAmount');
+const decrementBtn = document.querySelectorAll('#decrement');
+const quantityElem = document.querySelectorAll('#quantity');
+const incrementBtn = document.querySelectorAll('#increment');
+const priceElem = document.querySelectorAll('#price');
+const subtotalElem = document.querySelector('#subtotal');
+const taxElem = document.querySelector('#tax');
+const totalElem = document.querySelector('#total');
 
 
+// loop: for add event on multiple `increment` & `decrement` button
+for (let i = 0; i < incrementBtn.length; i++) {
+
+  incrementBtn[i].addEventListener('click', function () {
+
+    // collect the value of `quantity` textContent,
+    // based on clicked `increment` button sibling.
+    let increment = Number(this.previousElementSibling.textContent);
+
+    // plus `increment` variable value by 1
+    increment++;
+
+    // show the `increment` variable value on `quantity` element
+    // based on clicked `increment` button sibling.
+    this.previousElementSibling.textContent = increment;
+
+    totalCalc();
+
+  });
 
 
-for (let i = 0; i < incrementBtn. lenght; i++) {
+  decrementBtn[i].addEventListener('click', function () {
 
-incrementBtn[i].addEventListener('click', function (){
-    
-let increment = Number(this.previousElementSibling.textContent);
+    // collect the value of `quantity` textContent,
+    // based on clicked `decrement` button sibling.
+    let decrement = Number(this.nextElementSibling.textContent);
 
-increment++;
+    // minus `decrement` variable value by 1 based on condition
+    decrement <= 1 ? 1 : decrement--;
 
-this.previousElementSibling.textContent = increment;
+    // show the `decrement` variable value on `quantity` element
+    // based on clicked `decrement` button sibling.
+    this.nextElementSibling.textContent = decrement;
 
-totalCalc();
+    totalCalc();
 
-} );
-
-decrementBtn[i].addEventListener('click', function (){
-
-let decrement = Number(this.nextElementSibling.textContent);
-
-decrement <= 1 ? 1 : decrement--;
-
-this.nextElementSibling.textContent = decrement;
-
-totalCalc();
-
-});
+  });
 
 }
 
-const totalCalc = function() {
-    const tax = 0.1;
-    let subtotal = 0;
-    let totalTax = 0;
-    let total = 0;
 
-    for (let i = 0; i < quantityElem.lenght; i++){
 
-        subtotal += Number(quantityElem[i].textContent) * Number(priceElem[i].textContent);
-    }
+// function: for calculating total amount of product price
+const totalCalc = function () {
 
-    SubtotalElem.textContent = subtotal.toFixed(2);
+  // declare all initial variable
+  const tax = 0.05;
+  let subtotal = 0;
+  let totalTax = 0;
+  let total = 0;
 
-    totalTax = subtotal * tax;
+  // loop: for calculating `subtotal` value from every single product
+  for (let i = 0; i < quantityElem.length; i++) {
 
-   taxaElem.textContent = totalTax.toFixed(2);
-   
-   total = subtotal + totalTax;
+    subtotal += Number(quantityElem[i].textContent) * Number(priceElem[i].textContent);
 
-   totalElem.textContent = total.toFixed(2);
-   payAmountBtn.textContent = total.toFixed(2);
+  }
+
+  // show the `subtotal` variable value on `subtotalElem` element
+  subtotalElem.textContent = subtotal.toFixed(2);
+
+  // calculating the `totalTax`
+  totalTax = subtotal * tax;
+
+  // show the `totalTax` on `taxElem` element
+  taxElem.textContent = totalTax.toFixed(2);
+
+  // calcualting the `total`
+  total = subtotal + totalTax;
+
+  // show the `total` variable value on `totalElem` & `payAmountBtn` element
+  totalElem.textContent = total.toFixed(2);
+  payAmountBtn.textContent = total.toFixed(2);
 
 }
